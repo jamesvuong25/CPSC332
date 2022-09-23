@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9-23 Participation</title>
+
+    <link rel="stylesheet" href="my-style-sheet.css">
+
+    <style>
+        h1 {
+            background-color: cornflowerblue;
+        }
+        li {
+            background-color: gold;
+        }
+        #main-header, li {
+            color:darkgoldenrod;
+        }
+        .sub-header {
+            color:cadetblue
+        }
+        span li, p {
+            background-color:darkorchid;
+        }
+
+    </style>
+    <!--EMBEDDED(GOLD) OVERRIDES EXTERNAL STYLESHEET (ORANGE IN MY-STYLE-SHEET.CSS)-->
+    <!--# refers to ID, . refers to class-->
+    <!--"span li, p" refers to all elements within SPAN-->
+</head>
+
+<body>
+    <h1 id="main-header">TODAY'S PARTICIPATION</h1>
+    <h1 style="background-color:rgb(175, 50, 75)">TODAY'S PARTICIPATION BUT IN RED</h1>
+    <!--INLINE COLOR (RED) OVERRIDES EMBEDDED (BLUE)-->
+    <ul>
+        <li style="background-color: grey;">James</li>
+        <li>Vuong</li>
+        <!--INLINE COLOR (GREY) OVERRIDES EMBEDDED (GOLD)-->
+    </ul>
+    <h2 class="sub-header"> THIS IS A L2 HEADER</h2>
+    <h3 class="sub-header"> THIS IS A L3 HEADER</h3>
+
+    <span>
+        <ul>
+            <li>this is a list item</li>
+        </ul>
+        <p>james</p>
+    </span>
+
+    <table>
+        <th></th>
+        <tr></tr>
+    </table>
+
+</body>
+</html>

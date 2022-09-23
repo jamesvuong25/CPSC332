@@ -1,0 +1,10 @@
+li {
+    background-color: coral;
+}
+
+#main-header:hover::after {
+/* hover over the main header and see what happens */
+/*after refers to where in the header it will show*/
+    content: "BOO";
+    background-color: crimson;
+}
