@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+
+        #body {
+            max-width: 500px;
+            margin: 0px auto;
+            grid-template-columns: 20% auto;
+            grid-template-rows: 60px 300px;
+            grid-template-areas:
+                "navigation navigation navigation"
+                "leftContent rightContent rightContent";
+        }
+
+        #grid-container {
+            display:grid;
+            grid-template-areas: auto auto auto;
+        }
+
+        #Navigation {
+            background-color: darkslategrey;
+            grid-area: Navigation;
+            line-height: 50px;
+        }
+        #leftContent {
+            background-color: bisque;
+            /* grid-area: leftContent; */
+        }
+        #rightContent{
+            background-color: brown;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div id="grid-container">
+        <div id="Navigation">Navigation</div>
+        <div id="leftContent">Left Content</div> 
+        <div id="rightContent">Right Content</div>
+     </div>
+</body>
+
+</html>

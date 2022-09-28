@@ -7,17 +7,55 @@
     <title>Flex-Box Layout</title>
 
     <style>
-        
+        body {
+            max-width: 300px;
+            height: 500px;
+            text-align: center;
+            margin: 0px auto;
+        }
+
+        #header {
+            background-color: aquamarine;
+            line-height: 50px;
+            height: 15%;
+            width:100%;
+        }
+
+        #leftContent {
+            background-color: darkorchid;
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: 20%;
+            height: 100%;
+        }
+
+        #rightContent{
+            background-color: coral;
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: 80%;
+            height: 100%;
+        }
+
+        #container {
+        display: flex;    
+        flex-direction: row;
+        border:5px dotted blue;
+        height: 85%;
+        }
+        /* since left and right content are in container, 
+        set height here and it will change the right and left 
+        height */
+
     </style>
 </head>
 
 <body>
+    <div id="header">Header</div>
     <div id="container">
-        <div id="header">Header</div>
-        <div id="right">Right Content</div>
-        <div id="left">Left Content</div>
+        <div id="leftContent">Left content</div>
+        <div id="rightContent">Right content</div>
     </div>
-
 </body>
 
 </html>
