@@ -12,3 +12,11 @@
 fieldset {
     border: 5px outset lightgreen;
 }
+
+button:hover {
+    background-color: lightskyblue;
+}
+
+button:after {
+    background-color:red;
+}
