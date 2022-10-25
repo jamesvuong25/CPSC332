@@ -1,0 +1,14 @@
+#legend {
+    padding: 2px;
+    border: 10px outset cornflowerblue;
+    border-width: 2px;
+}
+
+#form {
+    text-align: center;
+    align-content: center;
+}
+
+fieldset {
+    border: 5px outset lightgreen;
+}
