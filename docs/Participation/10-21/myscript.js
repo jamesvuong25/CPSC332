@@ -29,7 +29,21 @@ function saveData() {
 function checkSaveData() {
     if (label1.value == "" || label2.value == "" || label3.value == "") 
     {
-        window.alert("2 Please fill out AND save all entries before submitting!");
+        window.alert("2 Please fill out all entries before submitting!");
     }
 }
 
+function clearLabel1() {
+    sessionStorage.removeItem("label1");
+    label1.value = "";
+}
+
+function clearLabel2() {
+    sessionStorage.removeItem("label2");
+    label2.value = "";
+}
+
+function clearLabel3() {
+    sessionStorage.removeItem("label3");
+    label3.value = "";
+}
