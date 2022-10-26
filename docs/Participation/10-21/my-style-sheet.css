@@ -17,6 +17,6 @@ button:hover {
     background-color: lightskyblue;
 }
 
-button:after {
+/* button:visited {
     background-color:red;
-}
+} */

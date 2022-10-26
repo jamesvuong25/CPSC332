@@ -17,9 +17,15 @@
     </style>
 
     <script>
-        // document.getElementById("label1").textContent = label1;
-        // document.getElementById("label2").textContent = label2;
-        // document.getElementById("label3").textContent = label3;
+        window.onload = function() {
+            var label1 = document.getElementById("label1");
+            var label2 = document.getElementById("label2");
+            var label3 = document.getElementById("label3");
+            label1.innerText = sessionStorage.getItem("label1");
+            label2.innerText = sessionStorage.getItem("label2");
+            label3.innerText = sessionStorage.getItem("label3");
+        }
+
     </script>
 </head>
 
@@ -33,9 +39,9 @@
             <th>Label 3</th>
         </tr>
         <tr>
-            <td id="first"></td>
-            <td id="last"></td>
-            <td id="basketballPlayer"></td>
+            <td id="label1"></td>
+            <td id="label2"></td>
+            <td id="label3"></td>
         </tr>
     </table>
 
