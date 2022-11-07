@@ -4,39 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Submission Page</title>
-
+    <title>Document</title>
     <style>
-        table, th {
+        table,
+        th {
             border: 1px solid black;
+
         }
 
         td {
             border: 1px dotted black;
         }
     </style>
-
     <script>
-        window.onload = function() {
-            var label1 = document.getElementById("label1");
-            var label2 = document.getElementById("label2");
-            var label3 = document.getElementById("label3");
-            label1.innerText = sessionStorage.getItem("label1");
-            label2.innerText = sessionStorage.getItem("label2");
-            label3.innerText = sessionStorage.getItem("label3");
-        }
+        window.onload = function(){
+            let label1 =  sessionStorage.getItem("label1");
+            let label2 = sessionStorage.getItem("label2");
+            let label3 = sessionStorage.getItem("label3");
+            document.getElementById("label1").innerText = label1;
+            document.getElementById("label2").innerText = label2;
+            document.getElementById("label3").innerText = label3;
 
+
+        }
     </script>
 </head>
-
 <body>
-    
     <h1>Submission Results Page</h1>
     <table>
-            <tr>
-            <th>Label 1</th>
-            <th>Label 2</th>
-            <th>Label 3</th>
+        <caption>Submission Page</caption>
+        <tr>
+            <th>Grocery Item 1</th>
+            <th>Grocery Item 2</th>
+            <th>Grocery Item 3</th>
+
         </tr>
         <tr>
             <td id="label1"></td>
@@ -44,6 +45,6 @@
             <td id="label3"></td>
         </tr>
     </table>
-
+    <a href="../../index.html">Back to the participation index</a>
 </body>
 </html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPSC 332 Exam 2</title>
+
+    <style>
+        legend {
+            padding: 0px 10px 0px 10px;
+        }
+        fieldset {
+            border: 3px dashed cornflowerblue;
+            padding: 5px;
+            margin: 10px;
+        }
+        div {
+            margin: 10px;
+            min-width: 150px;
+        }
+    </style>
+
+    <script>
+
+        // $(document).ready(function() {
+
+        // })
+        
+        const clearFormVar = document.getElementById("clearFormButton");
+        clearFormVar.addEventListener("click", clearForm);
+        function clearForm() {
+            document.getElementById("form").reset();
+            // document.getElementById("theUltQuest").reset();
+            // document.getElementById("theAnswer").reset();
+            // document.getElementById("calcResult").reset();
+        }
+
+        // function calculateFunction() {
+
+        // }
+
+        document.getElementById("theUltQuest").addEventListener("mouseover", function() {
+            document.getElementById("theUltQuest").style.backgroundColor = "lightyellow";
+        });
+
+        document.getElementById("theAnswer").addEventListener("mouseover", function() {
+            document.getElementById("theAnswer").style.backgroundColor = "lightyellow";
+        });
+
+        document.getElementById("calcResult").addEventListener("mouseover", function() {
+            document.getElementById("calcResult").style.backgroundColor = "lightyellow";
+        });
+    </script>
+
+</head>
+
+
+<body>
+    <section id="information">
+        <fieldset>
+            <legend>CPSC 332 Exam 2 Answer Submission Form</legend>
+            <form id="form" action="https://gu-dmo.alwaysdata.net/exam2/exam-submission.php" method="POST">
+
+                <div id="ultimateQuestion" class="inputs">
+                    <label for="theUltQuest">The Ultimate Question</label>
+                    <input type="text" id="theUltQuest" name="theUltQuest" required>
+                    <br>
+                </div>
+
+                <div id="theAnswerDiv" class="inputs">
+                    <label for="theAnswer">The Answer</label>
+                    <input type="text" id="theAnswer" name="theAnswer" required>
+                    <br>
+                </div>
+
+                <div id="calculationResult" class="inputs">
+                    <label for="Calculation Result">Calculation Result</label>
+                    <input type="text" id="calcResult" name="calcResult" readonly="readonly">
+                    <br>
+                </div>
+
+                <div id="theButtons" class="theButtons">
+                    <label for="Submit Response"></label>
+                    <input type="submit" value="Submit Response" onclick="validateForm()">
+
+                    <label for="Clear Form"></label>
+                    <button  id="clearFormButton" type="button">Clear Form</button>
+
+                    <label for="Calculate"></label>
+                    <button  id="Calculate" onclick=calculateFunction() type="button">Calculate</button>
+                </div>
+            </form>
+        </fieldset>
+    </section>
+</body>
+
+
+</html>

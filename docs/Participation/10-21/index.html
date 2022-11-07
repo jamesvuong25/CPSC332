@@ -4,36 +4,94 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>10-21 Activity</title>
-    <link rel="stylesheet" href="my-style-sheet.css">
-    <script src="myscript.js"></script>
+    <title>Document</title>
+    <style>
+        fieldset{
+            border-width: 5px;
+            border: dotted;
+            border-color: black;
+            padding: 10px;
+            margin: 10px;
+        }
+        form{
+            padding: 5px;
+            margin: 5px;
+            text-align: center;
+        }
 
+    </style>
+    <script>
+        function validateForm(){
+            var label1 = document.getElementById("label1");
+            var label2 = document.getElementById("label2");
+            var label3 = document.getElementById("label3");
+
+            if(label1.value == ""){
+                window.alert("Please enter a value for label 1");
+            }
+            if(label2.value == ""){
+                window.alert("Please enter a value for label 2");
+            }
+            if(label3.value == ""){
+                window.alert("Please enter a value for label 3");
+            }
+        }
+
+        function storeData(){
+            var label1 = document.getElementById("label1");
+            var label2 = document.getElementById("label2");
+            var label3 = document.getElementById("label3");
+            var button1 = document.getElementById("saveButton1");
+            var button2 = document.getElementById("saveButton2");
+            var button3 = document.getElementById("saveButton3");
+
+            sessionStorage.setItem("label1", label1.value);
+            sessionStorage.setItem("label2", label2.value);
+            sessionStorage.setItem("label3", label3.value);
+            button1.innerText = "Saved";
+            button2.innerText = "Saved";
+            button3.innerText = "Saved";
+        }
+
+        function clearData1(){
+            var label1 = document.getElementById("label1");
+            sessionStorage.removeItem("label1");
+            label1.value = "";
+        }
+
+        function clearData2(){
+            var label2 = document.getElementById("label2");
+            sessionStorage.removeItem("label2");
+            label2.value = "";
+        }
+
+        function clearData3(){
+            var label3 = document.getElementById("label3");
+            sessionStorage.removeItem("label3");
+            label3.value = "";
+        }
+
+    </script>
 </head>
-
 <body>
     <fieldset>
-        <legend id="legend">CPSC 332 10/21 Participation</legend>
-
-        <form action="./submission.html" method="POST" id="form">
-            <label for="label1">Label 1:</label>
-            <input type="text" id="label1" name="label1" required>
-            <button id="saveButton1" type="button" onclick=saveData()>Save Data</button>
+        <legend>CPSC 322 10/21 Participation</legend>
+        <form action="submission.html" method="POST">
+            <label for="label1">Grocery item 1</label>
+            <input onfocus="clearData1()" type="text" id="label1" name="label1" required>
+            <button id="saveButton1" onclick="storeData()" type="button">Save Data</button>
             <br>
-
-            <label for="label2">Label 2:</label>
-            <input type="text" id="label2" name="label2" required>
-            <button id="saveButton2"type="button" onclick=saveData()>Save Data</button>
+            <label for="label2">Grocery item 2</label>
+            <input  onfocus="clearData2()" type="text" id="label2" name="label2" required>
+            <button  id="saveButton2" onclick="storeData()" type="button">Save Data</button>
             <br>
-
-            <label for="label3">Label 3:</label>
-            <input type="text" id="label3" name="label3" required>
-            <button id="saveButton3" type="button" onclick=saveData()>Save Data</button>
+            <label for="label3">Grocery item 3</label>
+            <input  onfocus="clearData3()" type="text" id="label3" name="label3" required>
+            <button  id="saveButton3" onclick="storeData()" type="button">Save Data</button>
             <br>
-
-            <input type="submit" value="Submit Response" onclick=checkSubmission()>
-          </form>
-
+            <input type="submit" value="Submit" onclick="validateForm()">
+        </form>
     </fieldset>
+    <a href="../../index.html">Back to the participation index</a>
 </body>
-
 </html>
